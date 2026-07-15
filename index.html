@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI, Machine Learning, and Computational Chemistry in Drug Discovery — A global academic research portal covering Europe, Japan, China, South Korea, and Taiwan. Explore the Erasmus Mundus ChEMoinformatics+ program, research papers, and future trends.">
+    <meta name="keywords" content="AI, Machine Learning, Computational Chemistry, Drug Discovery, Chemoinformatics, Erasmus Mundus, Deep Learning, QSAR, ADMET, Molecular Docking, GNNs, Transformers">
+    <meta name="author" content="AI & Computational Chemistry Research Portal">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#2563eb">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a1628">
+    <meta property="og:title" content="AI & Computational Chemistry: The Future of Drug Discovery">
+    <meta property="og:description" content="A comprehensive academic portal exploring AI and ML in drug discovery with a global perspective across Europe, Japan, China, South Korea, and Taiwan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-site.netlify.app">
+    <meta property="og:image" content="https://your-site.netlify.app/og-image.png">
+    <meta property="og:site_name" content="AI & CompChem Research Portal">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI & Computational Chemistry: The Future of Drug Discovery">
+    <meta name="twitter:description" content="Explore AI, ML, and computational chemistry in drug discovery — global research portal.">
+    <meta name="twitter:image" content="https://your-site.netlify.app/og-image.png">
+    <title>AI & Computational Chemistry: The Future of Drug Discovery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://your-site.netlify.app/#organization",
+                "name": "AI & Computational Chemistry Research Portal",
+                "url": "https://your-site.netlify.app",
+                "logo": {"@type": "ImageObject","url": "https://your-site.netlify.app/logo.png","width": 512,"height": 512},
+                "sameAs": ["https://masterchemoinfoplus.chimie.unistra.fr/"],
+                "description": "Academic research portal exploring AI and Machine Learning in Computational Chemistry and Drug Discovery with a global perspective."
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://your-site.netlify.app/#webpage",
+                "url": "https://your-site.netlify.app",
+                "name": "AI & Computational Chemistry: The Future of Drug Discovery",
+                "isPartOf": {"@id": "https://your-site.netlify.app/#organization"},
+                "about": {"@type": "Thing","name": "Computational Chemistry","sameAs": "https://www.wikidata.org/wiki/Q291244"},
+                "description": "A comprehensive academic portal exploring AI and ML in drug discovery with a global perspective across Europe, Japan, China, South Korea, and Taiwan.",
+                "inLanguage": "en-US",
+                "datePublished": "2026-07-15",
+                "dateModified": "2026-07-15"
+            },
+            {
+                "@type": "Article",
+                "@id": "https://your-site.netlify.app/#article",
+                "isPartOf": {"@id": "https://your-site.netlify.app/#webpage"},
+                "headline": "AI & Computational Chemistry: The Future of Drug Discovery",
+                "description": "Exploring the convergence of artificial intelligence, machine learning, and computational chemistry to accelerate pharmaceutical research across Europe, Japan, China, South Korea, and Taiwan.",
+                "author": {"@type": "Organization","@id": "https://your-site.netlify.app/#organization"},
+                "publisher": {"@type": "Organization","@id": "https://your-site.netlify.app/#organization"},
+                "datePublished": "2026-07-15",
+                "dateModified": "2026-07-15",
+                "mainEntityOfPage": {"@id": "https://your-site.netlify.app/#webpage"}
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://your-site.netlify.app/#breadcrumb",
+                "itemListElement": [
+                    {"@type": "ListItem","position": 1,"name": "Home","item": "https://your-site.netlify.app/#home"},
+                    {"@type": "ListItem","position": 2,"name": "History","item": "https://your-site.netlify.app/#history"},
+                    {"@type": "ListItem","position": 3,"name": "AI Today","item": "https://your-site.netlify.app/#ai-today"},
+                    {"@type": "ListItem","position": 4,"name": "Global Impact","item": "https://your-site.netlify.app/#global"},
+                    {"@type": "ListItem","position": 5,"name": "Future","item": "https://your-site.netlify.app/#future"},
+                    {"@type": "ListItem","position": 6,"name": "Research Papers","item": "https://your-site.netlify.app/#papers"},
+                    {"@type": "ListItem","position": 7,"name": "References","item": "https://your-site.netlify.app/#references"},
+                    {"@type": "ListItem","position": 8,"name": "About","item": "https://your-site.netlify.app/#about"}
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress" aria-hidden="true"><div class="reading-progress-bar" id="readingProgressBar"></div></div>
+<header class="site-header" id="header" role="banner">
+    <div class="container nav-container">
+        <a href="#home" class="logo" aria-label="AI & Computational Chemistry Research Portal - Home">
+            <i class="fas fa-atom" aria-hidden="true"></i><span>AI & CompChem</span>
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode (Ctrl+D)">
+            <i class="fas fa-moon" id="themeIcon" aria-hidden="true"></i><span class="theme-label">Dark</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#history" class="nav-link">History</a></li>
+                <li><a href="#ai-today" class="nav-link">AI Today</a></li>
+                <li><a href="#global" class="nav-link">Global Impact</a></li>
+                <li><a href="#future" class="nav-link">Future</a></li>
+                <li><a href="#papers" class="nav-link">Research Papers</a></li>
+                <li><a href="#references" class="nav-link">References</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<nav class="breadcrumb-nav" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <div class="container">
+        <ol class="breadcrumb-list">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="#home" itemprop="item" aria-current="page"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+        </ol>
+    </div>
+</nav>
+<main id="main-content">
+<section id="home" class="hero" aria-label="Home">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">AI & Computational Chemistry:<br><span class="highlight">The Future of Drug Discovery</span></h1>
+            <p class="hero-subtitle">Exploring the convergence of artificial intelligence, machine learning, and computational chemistry to accelerate pharmaceutical research across Europe, Japan, China, South Korea, and Taiwan.</p>
+            <div class="hero-buttons">
+                <a href="#ai-today" class="btn btn-primary" role="button"><i class="fas fa-flask" aria-hidden="true"></i> Explore Research</a>
+                <a href="#papers" class="btn btn-outline" role="button"><i class="fas fa-book-open" aria-hidden="true"></i> Browse Papers</a>
+            </div>
+            <div class="social-share hero-share">
+                <span class="share-label">Share:</span>
+                <a href="https://twitter.com/intent/tweet?text=AI%20%26%20Computational%20Chemistry%3A%20The%20Future%20of%20Drug%20Discovery&url=https%3A%2F%2Fyour-site.netlify.app" target="_blank" rel="noopener noreferrer" class="share-btn share-twitter" aria-label="Share on Twitter/X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fyour-site.netlify.app" target="_blank" rel="noopener noreferrer" class="share-btn share-linkedin" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyour-site.netlify.app" target="_blank" rel="noopener noreferrer" class="share-btn share-facebook" aria-label="Share on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="stats-bar" aria-label="Key statistics">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item"><span class="stat-number">$2.5B</span><span class="stat-label">Traditional Cost</span></div>
+            <div class="stat-item"><span class="stat-number">12.5</span><span class="stat-label">Years (Traditional)</span></div>
+            <div class="stat-item stat-highlight"><span class="stat-number">-40%</span><span class="stat-label">Cost Reduction (AI)</span></div>
+            <div class="stat-item stat-highlight"><span class="stat-number">12-18</span><span class="stat-label">Months (AI)</span></div>
+        </div>
+    </div>
+</section>
+<section id="history" class="section section-alt" aria-labelledby="history-heading">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Timeline</span>
+            <h2 class="section-title" id="history-heading">Evolution of Computational Drug Discovery</h2>
+            <p class="section-desc">Six decades of innovation that transformed how we discover new medicines.</p>
+        </div>
+        <div class="timeline" role="list" aria-label="Historical milestones">
+            <div class="timeline-line" aria-hidden="true"></div>
+            <div class="timeline-item" data-year="1960s" role="listitem">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-card">
+                    <span class="timeline-year">1960s</span>
+                    <h3><span class="glossary-term" data-term="QSAR" tabindex="0" role="button" aria-label="QSAR - Quantitative Structure-Activity Relationship. Click to learn more">QSAR</span></h3>
+                    <p class="timeline-full">Quantitative Structure-Activity Relationship</p>
+                    <p>Hansch and Fujita established the foundational principle that biological activity can be quantitatively related to physicochemical properties, enabling the first systematic approach to rational drug design.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="1980s" role="listitem">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-card">
+                    <span class="timeline-year">1980s</span>
+                    <h3>Molecular Docking</h3>
+                    <p class="timeline-full">Structure-Based Drug Design</p>
+                    <p>Computational methods for predicting the preferred orientation of a ligand when bound to a protein receptor emerged, revolutionizing structure-based drug design.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="1990s" role="listitem">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-card">
+                    <span class="timeline-year">1990s</span>
+                    <h3>Molecular Dynamics</h3>
+                    <p class="timeline-full">Molecular Dynamics Simulations</p>
+                    <p>Classical MD simulations using force fields like <span class="glossary-term" data-term="AMBER" tabindex="0" role="button" aria-label="AMBER - Assisted Model Building with Energy Refinement. Click to learn more">AMBER</span> and <span class="glossary-term" data-term="GROMACS" tabindex="0" role="button" aria-label="GROMACS - GROningen MAchine for Chemical Simulations. Click to learn more">GROMACS</span> enabled atomistic-level understanding of protein flexibility and drug-receptor interactions.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2000s" role="listitem">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-card">
+                    <span class="timeline-year">2000s</span>
+                    <h3>High-Throughput Screening</h3>
+                    <p class="timeline-full">HTS & Virtual Screening</p>
+                    <p>Automated experimental screening of millions of compounds combined with computational virtual screening approaches dramatically expanded chemical space exploration.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2010s" role="listitem">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-card">
+                    <span class="timeline-year">2010s</span>
+                    <h3>Deep Learning Revolution</h3>
+                    <p class="timeline-full">Neural Networks in Cheminformatics</p>
+                    <p>Deep neural networks demonstrated remarkable performance in molecular property prediction, with architectures like <span class="glossary-term" data-term="GNN" tabindex="0" role="button" aria-label="Graph Neural Network. Click to learn more">graph convolutional networks</span> and recurrent networks transforming the field.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2020s" role="listitem">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-card">
+                    <span class="timeline-year">2020s</span>
+                    <h3>Generative AI & Foundation Models</h3>
+                    <p class="timeline-full">AlphaFold, GPT, and Beyond</p>
+                    <p>Transformer-based architectures, diffusion models, and foundation models like <span class="glossary-term" data-term="AlphaFold" tabindex="0" role="button" aria-label="AlphaFold - DeepMind's AI system for protein structure prediction. Click to learn more">AlphaFold 2/3</span> enable de novo molecular design and protein structure prediction with unprecedented accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="ai-today" class="section" aria-labelledby="ai-today-heading">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Current Landscape</span>
+            <h2 class="section-title" id="ai-today-heading">AI in Drug Discovery Today</h2>
+            <p class="section-desc">The methods, tools, and applications driving modern pharmaceutical research.</p>
+        </div>
+        <div class="content-block">
+            <h3 class="block-title"><i class="fas fa-brain" aria-hidden="true"></i> AI/ML Methods</h3>
+            <div class="cards-grid three-col">
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
+                    <h4><span class="glossary-term" data-term="GNN" tabindex="0" role="button" aria-label="Graph Neural Network. Click to learn more">Graph Neural Networks</span></h4>
+                    <p>Model molecular structures as graphs where atoms are nodes and bonds are edges, enabling end-to-end learning of molecular representations directly from chemical structure.</p>
+                    <span class="card-tag">Structure Learning</span>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+                    <h4><span class="glossary-term" data-term="Transformer" tabindex="0" role="button" aria-label="Transformer - Neural network architecture using self-attention. Click to learn more">Transformers</span></h4>
+                    <p>Self-attention mechanisms adapted for molecular SMILES strings and protein sequences, enabling context-aware representation learning and generative modeling.</p>
+                    <span class="card-tag">Sequence Modeling</span>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
+                    <h4>Reinforcement Learning</h4>
+                    <p>Agents learn optimal molecular optimization strategies through reward functions, enabling guided exploration of chemical space toward desired property profiles.</p>
+                    <span class="card-tag">Optimization</span>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-random" aria-hidden="true"></i></div>
+                    <h4><span class="glossary-term" data-term="GAN" tabindex="0" role="button" aria-label="Generative Adversarial Network. Click to learn more">GANs</span></h4>
+                    <p>Generative Adversarial Networks pit generator and discriminator networks against each other to create novel, realistic molecular structures with desired properties.</p>
+                    <span class="card-tag">Generative Modeling</span>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-compress-arrows-alt" aria-hidden="true"></i></div>
+                    <h4><span class="glossary-term" data-term="VAE" tabindex="0" role="button" aria-label="Variational Autoencoder. Click to learn more">VAEs</span></h4>
+                    <p>Variational Autoencoders learn continuous latent representations of molecular space, enabling smooth interpolation and directed generation of novel compounds.</p>
+                    <span class="card-tag">Latent Space</span>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon"><i class="fas fa-th" aria-hidden="true"></i></div>
+                    <h4><span class="glossary-term" data-term="CNN" tabindex="0" role="button" aria-label="Convolutional Neural Network. Click to learn more">CNNs</span></h4>
+                    <p>Convolutional Neural Networks applied to 2D/3D molecular grids and images for property prediction, binding affinity estimation, and activity classification.</p>
+                    <span class="card-tag">Spatial Learning</span>
+                </div>
+            </div>
+        </div>
+        <div class="content-block">
+            <h3 class="block-title"><i class="fas fa-tools" aria-hidden="true"></i> Computational Tools</h3>
+            <div class="cards-grid four-col">
+                <div class="tool-card"><span class="tool-name">PyTorch</span><span class="tool-type">Deep Learning Framework</span></div>
+                <div class="tool-card"><span class="tool-name">TensorFlow</span><span class="tool-type">Deep Learning Framework</span></div>
+                <div class="tool-card"><span class="tool-name"><span class="glossary-term" data-term="RDKit" tabindex="0" role="button" aria-label="RDKit - Open-source cheminformatics toolkit. Click to learn more">RDKit</span></span><span class="tool-type">Cheminformatics Toolkit</span></div>
+                <div class="tool-card"><span class="tool-name">Open Babel</span><span class="tool-type">Format Conversion</span></div>
+                <div class="tool-card"><span class="tool-name">DeepChem</span><span class="tool-type">ML for Chemistry</span></div>
+                <div class="tool-card"><span class="tool-name">ChemPy</span><span class="tool-type">Python Chemistry</span></div>
+                <div class="tool-card"><span class="tool-name"><span class="glossary-term" data-term="GROMACS" tabindex="0" role="button" aria-label="GROMACS - Molecular dynamics simulation package. Click to learn more">GROMACS</span></span><span class="tool-type">Molecular Dynamics</span></div>
+                <div class="tool-card"><span class="tool-name"><span class="glossary-term" data-term="AMBER" tabindex="0" role="button" aria-label="AMBER - Assisted Model Building with Energy Refinement. Click to learn more">AMBER</span></span><span class="tool-type">Molecular Dynamics</span></div>
+            </div>
+        </div>
+        <div class="content-block">
+            <h3 class="block-title"><i class="fas fa-bullseye" aria-hidden="true"></i> Key Applications</h3>
+            <div class="cards-grid three-col">
+                <div class="app-card">
+                    <div class="app-icon"><i class="fas fa-vial" aria-hidden="true"></i></div>
+                    <h4><span class="glossary-term" data-term="ADMET" tabindex="0" role="button" aria-label="ADMET - Absorption, Distribution, Metabolism, Excretion, Toxicity. Click to learn more">ADMET</span> Prediction</h4>
+                    <p>Predict Absorption, Distribution, Metabolism, Excretion, and Toxicity properties to filter candidates early and reduce late-stage attrition.</p>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon"><i class="fas fa-search" aria-hidden="true"></i></div>
+                    <h4>Virtual Screening</h4>
+                    <p>Computationally evaluate large compound libraries against biological targets to identify promising hit compounds efficiently.</p>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon"><i class="fas fa-dna" aria-hidden="true"></i></div>
+                    <h4>De Novo Design</h4>
+                    <p>Generate entirely novel molecular structures with optimized properties using generative AI models trained on chemical space.</p>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
+                    <h4>Biomarker Discovery</h4>
+                    <p>Identify molecular signatures that predict disease states, treatment response, and patient stratification using multi-omics data.</p>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon"><i class="fas fa-hospital" aria-hidden="true"></i></div>
+                    <h4>Clinical Trial Optimization</h4>
+                    <p>AI-driven patient recruitment, trial design, and outcome prediction to reduce costs and accelerate regulatory approval.</p>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon"><i class="fas fa-crosshairs" aria-hidden="true"></i></div>
+                    <h4>Target Identification</h4>
+                    <p>Integrate genomics, proteomics, and literature data to discover and validate novel therapeutic targets for drug intervention.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section section-alt" aria-labelledby="charts-heading">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Data Visualization</span>
+            <h2 class="section-title" id="charts-heading">The AI Impact in Numbers</h2>
+        </div>
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h4 class="chart-title">Traditional vs. AI Drug Discovery</h4>
+                <canvas id="costChart" role="img" aria-label="Bar chart comparing traditional and AI drug discovery metrics"></canvas>
+            </div>
+            <div class="chart-container">
+                <h4 class="chart-title">AI Adoption in Pharma (2015-2030)</h4>
+                <canvas id="adoptionChart" role="img" aria-label="Line chart showing AI adoption trends in pharmaceutical industry"></canvas>
+            </div>
+            <div class="chart-container">
+                <h4 class="chart-title">Cost Breakdown by Phase</h4>
+                <canvas id="costBreakdownChart" role="img" aria-label="Doughnut chart showing drug development cost breakdown"></canvas>
+            </div>
+            <div class="chart-container">
+                <h4 class="chart-title">Success Rate Comparison</h4>
+                <canvas id="successRateChart" role="img" aria-label="Bar chart comparing success rates of traditional, AI, and ML approaches"></canvas>
+            </div>
+            <div class="chart-container">
+                <h4 class="chart-title">Drug Discovery Timeline</h4>
+                <canvas id="timelineChart" role="img" aria-label="Horizontal bar chart comparing traditional vs AI drug discovery timelines"></canvas>
+            </div>
+            <div class="chart-container chart-table-container">
+                <h4 class="chart-title">AI Adoption Data (2015-2030)</h4>
+                <div class="table-wrapper">
+                    <table class="data-table" id="adoptionTable">
+                        <thead>
+                            <tr>
+                                <th scope="col" data-sort="year">Year <i class="fas fa-sort" aria-hidden="true"></i></th>
+                                <th scope="col" data-sort="adoption">AI Adoption (%) <i class="fas fa-sort" aria-hidden="true"></i></th>
+                                <th scope="col" data-sort="molecules">AI Molecules in Trials (%) <i class="fas fa-sort" aria-hidden="true"></i></th>
+                                <th scope="col" data-sort="funding">Global AI Funding ($B) <i class="fas fa-sort" aria-hidden="true"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody id="adoptionTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="global" class="section" aria-labelledby="global-heading">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Worldwide Perspective</span>
+            <h2 class="section-title" id="global-heading">Global Impact & Partnerships</h2>
+            <p class="section-desc">How AI-driven drug discovery is advancing across five major global regions.</p>
+        </div>
+        <div class="map-section">
+            <h3 class="block-title"><i class="fas fa-globe" aria-hidden="true"></i> Global Research Hubs</h3>
+            <div class="interactive-map" role="img" aria-label="Interactive world map showing research hubs in Europe, Japan, China, South Korea, and Taiwan">
+                <svg class="map-bg-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path class="map-land" d="M460,85 Q480,80 500,85 Q520,75 540,85 Q560,80 580,90 Q600,85 620,95 Q630,110 620,125 Q610,140 590,145 Q570,150 550,145 Q530,155 510,150 Q490,155 470,145 Q450,150 440,135 Q435,120 440,105 Q445,90 460,85Z"/>
+                    <path class="map-land" d="M830,120 Q840,115 850,120 Q855,130 850,140 Q845,150 835,155 Q825,150 820,140 Q815,130 820,120 Q825,115 830,120Z"/>
+                    <path class="map-land" d="M720,130 Q750,120 780,130 Q800,125 820,135 Q830,150 820,165 Q800,175 770,170 Q740,175 720,165 Q700,155 710,140 Q715,135 720,130Z"/>
+                    <path class="map-land" d="M805,135 Q815,130 825,135 Q830,145 825,155 Q815,160 805,155 Q800,145 805,135Z"/>
+                    <path class="map-land" d="M785,165 Q790,160 795,165 Q798,172 795,178 Q790,180 785,178 Q782,172 785,165Z"/>
+                    <path class="map-land" d="M120,80 Q180,60 250,70 Q320,55 380,80 Q420,75 450,95 Q460,120 440,145 Q410,170 360,180 Q300,190 240,185 Q180,195 130,185 Q90,195 70,170 Q55,145 65,115 Q80,90 120,80Z" opacity="0.06"/>
+                    <path class="map-land" d="M280,220 Q310,210 340,220 Q360,235 350,260 Q340,290 320,315 Q300,340 280,350 Q260,360 250,340 Q245,315 255,285 Q265,255 280,230 Q285,225 280,220Z" opacity="0.06"/>
+                    <path class="map-land" d="M480,180 Q510,170 540,180 Q560,195 555,220 Q550,250 535,280 Q520,310 500,330 Q480,350 465,335 Q455,310 460,280 Q465,250 470,220 Q475,195 480,180Z" opacity="0.06"/>
+                    <path class="map-land" d="M780,320 Q820,310 860,320 Q880,335 870,355 Q855,375 820,380 Q785,385 765,370 Q755,350 765,335 Q775,325 780,320Z" opacity="0.06"/>
+                </svg>
+                <div class="map-region region-europe" data-region="europe" role="button" tabindex="0" aria-label="Europe research hub. Press Enter to view details.">
+                    <div class="map-marker"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span class="marker-label">Europe</span></div>
+                    <div class="map-tooltip">
+                        <h4>Europe</h4>
+                        <p><strong>Erasmus Mundus ChEMoinformatics+</strong> — 7 university consortium leading chemoinformatics education and research across the continent.</p>
+                        <ul><li>Erasmus Mundus Joint Master's</li><li>Strong pharma tradition (Roche, Novartis, AstraZeneca)</li><li>EMA regulatory leadership</li></ul>
+                    </div>
+                </div>
+                <div class="map-region region-japan" data-region="japan" role="button" tabindex="0" aria-label="Japan research hub. Press Enter to view details.">
+                    <div class="map-marker"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span class="marker-label">Japan</span></div>
+                    <div class="map-tooltip">
+                        <h4>Japan</h4>
+                        <p><strong>Academic Partnerships</strong> — University of Strasbourg-Nara/Tokyo collaboration since 2008. Leading chemoinformatics education.</p>
+                        <ul><li>Nara Institute of Science and Technology</li><li>University of Tokyo</li><li>Strong pharma industry (Takeda, Astellas)</li></ul>
+                    </div>
+                </div>
+                <div class="map-region region-china" data-region="china" role="button" tabindex="0" aria-label="China research hub. Press Enter to view details.">
+                    <div class="map-marker"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span class="marker-label">China</span></div>
+                    <div class="map-tooltip">
+                        <h4>China</h4>
+                        <p><strong>Major Pharma & Software Hub</strong> — Rapidly growing AI drug discovery ecosystem with strong government support and major pharma companies.</p>
+                        <ul><li>Insilico Medicine, XtalPi</li><li>Major CRO industry</li><li>State-funded AI initiatives</li></ul>
+                    </div>
+                </div>
+                <div class="map-region region-korea" data-region="korea" role="button" tabindex="0" aria-label="South Korea research hub. Press Enter to view details.">
+                    <div class="map-marker"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span class="marker-label">S. Korea</span></div>
+                    <div class="map-tooltip">
+                        <h4>South Korea</h4>
+                        <p><strong>Advanced Tech & Research</strong> — World-class computational infrastructure and growing biotech sector with government-backed AI initiatives.</p>
+                        <ul><li>KIST, KAIST research leadership</li><li>Samsung Biologics</li><li>Strong IT-biotech convergence</li></ul>
+                    </div>
+                </div>
+                <div class="map-region region-taiwan" data-region="taiwan" role="button" tabindex="0" aria-label="Taiwan research hub. Press Enter to view details.">
+                    <div class="map-marker"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span class="marker-label">Taiwan</span></div>
+                    <div class="map-tooltip">
+                        <h4>Taiwan</h4>
+                        <p><strong>Semiconductor & Computational Power</strong> — Leveraging world-leading semiconductor manufacturing for high-performance computing in drug discovery.</p>
+                        <ul><li>TSMC computational infrastructure</li><li>Academia Sinica research</li><li>AI chip manufacturing for HPC</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-block country-sections">
+            <h3 class="block-title"><i class="fas fa-flag" aria-hidden="true"></i> Regional Profiles</h3>
+            <div class="country-accordion">
+                <div class="country-panel">
+                    <button class="country-header" aria-expanded="false" aria-controls="europe-details">
+                        <span class="country-flag"><i class="fas fa-globe-europe" aria-hidden="true"></i></span>
+                        <span class="country-name">Europe</span>
+                        <span class="country-stats">7 Universities · €1,400/mo Scholarships</span>
+                        <i class="fas fa-chevron-down country-chevron" aria-hidden="true"></i>
+                    </button>
+                    <div class="country-details" id="europe-details" hidden>
+                        <div class="country-content">
+                            <div class="country-stats-grid">
+                                <div class="country-stat"><strong>Institutions:</strong> 7 Partner Universities</div>
+                                <div class="country-stat"><strong>Funding:</strong> €1,400/month (20 students)</div>
+                                <div class="country-stat"><strong>Program:</strong> 2-Year, 120 ECTS</div>
+                                <div class="country-stat"><strong>Key Players:</strong> Roche, Novartis, AstraZeneca</div>
+                            </div>
+                            <p><strong>Breakthrough:</strong> The Erasmus Mundus ChEMoinformatics+ program represents the most comprehensive chemoinformatics education initiative globally, with student mobility across France, Italy, Austria, Slovenia, Portugal, Poland, and Russia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="country-panel">
+                    <button class="country-header" aria-expanded="false" aria-controls="japan-details">
+                        <span class="country-flag"><i class="fas fa-torii-gate" aria-hidden="true"></i></span>
+                        <span class="country-name">Japan</span>
+                        <span class="country-stats">NAIST · Univ. of Tokyo · Takeda</span>
+                        <i class="fas fa-chevron-down country-chevron" aria-hidden="true"></i>
+                    </button>
+                    <div class="country-details" id="japan-details" hidden>
+                        <div class="country-content">
+                            <div class="country-stats-grid">
+                                <div class="country-stat"><strong>Institutions:</strong> NAIST, Univ. of Tokyo, Osaka Univ.</div>
+                                <div class="country-stat"><strong>Partnership:</strong> Strasbourg-Nara since 2008</div>
+                                <div class="country-stat"><strong>Industry:</strong> Takeda, Astellas, Daiichi Sankyo</div>
+                                <div class="country-stat"><strong>Focus:</strong> Chemoinformatics Education</div>
+                            </div>
+                            <p><strong>Breakthrough:</strong> Japan's academic partnership with European institutions has produced over 50 joint publications in chemoinformatics since 2008, establishing a model for East-West scientific collaboration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="country-panel">
+                    <button class="country-header" aria-expanded="false" aria-controls="china-details">
+                        <span class="country-flag"><i class="fas fa-dragon" aria-hidden="true"></i></span>
+                        <span class="country-name">China</span>
+                        <span class="country-stats">Insilico · XtalPi · WuXi AppTec</span>
+                        <i class="fas fa-chevron-down country-chevron" aria-hidden="true"></i>
+                    </button>
+                    <div class="country-details" id="china-details" hidden>
+                        <div class="country-content">
+                            <div class="country-stats-grid">
+                                <div class="country-stat"><strong>Companies:</strong> Insilico, XtalPi, WuXi AppTec</div>
+                                <div class="country-stat"><strong>Funding:</strong> $4.2B+ AI pharma investment</div>
+                                <div class="country-stat"><strong>Growth:</strong> 300% AI paper increase (2018-2023)</div>
+                                <div class="country-stat"><strong>Focus:</strong> Generative AI, CRO Services</div>
+                            </div>
+                            <p><strong>Breakthrough:</strong> China leads in AI-designed molecules entering clinical trials, with Insilico Medicine's ISM001-055 being the first fully AI-discovered drug to reach Phase II trials globally.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="country-panel">
+                    <button class="country-header" aria-expanded="false" aria-controls="korea-details">
+                        <span class="country-flag"><i class="fas fa-flag" aria-hidden="true"></i></span>
+                        <span class="country-name">South Korea</span>
+                        <span class="country-stats">KIST · KAIST · Samsung Biologics</span>
+                        <i class="fas fa-chevron-down country-chevron" aria-hidden="true"></i>
+                    </button>
+                    <div class="country-details" id="korea-details" hidden>
+                        <div class="country-content">
+                            <div class="country-stats-grid">
+                                <div class="country-stat"><strong>Institutions:</strong> KIST, KAIST, SNU, POSTECH</div>
+                                <div class="country-stat"><strong>Government:</strong> K-Bio Lab, AI-Bio Convergence</div>
+                                <div class="country-stat"><strong>Industry:</strong> Samsung Biologics, Celltrion</div>
+                                <div class="country-stat"><strong>Focus:</strong> HPC, Biologics, IT Convergence</div>
+                            </div>
+                            <p><strong>Breakthrough:</strong> South Korea's national supercomputing infrastructure enables molecular dynamics simulations at unprecedented scales, with KIST's AI drug discovery platform screening over 10 million compounds daily.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="country-panel">
+                    <button class="country-header" aria-expanded="false" aria-controls="taiwan-details">
+                        <span class="country-flag"><i class="fas fa-microchip" aria-hidden="true"></i></span>
+                        <span class="country-name">Taiwan</span>
+                        <span class="country-stats">TSMC · Academia Sinica · HPC</span>
+                        <i class="fas fa-chevron-down country-chevron" aria-hidden="true"></i>
+                    </button>
+                    <div class="country-details" id="taiwan-details" hidden>
+                        <div class="country-content">
+                            <div class="country-stats-grid">
+                                <div class="country-stat"><strong>Institutions:</strong> Academia Sinica, NTU, NTHU</div>
+                                <div class="country-stat"><strong>Infrastructure:</strong> TSMC, NCHC Supercomputing</div>
+                                <div class="country-stat"><strong>Focus:</strong> AI Chips, Computational Biology</div>
+                                <div class="country-stat"><strong>Unique:</strong> Semiconductor-Pharma Bridge</div>
+                            </div>
+                            <p><strong>Breakthrough:</strong> Taiwan uniquely bridges semiconductor manufacturing with pharmaceutical research, developing specialized AI accelerators that reduce molecular simulation times from weeks to hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-block erasmus-block">
+            <div class="erasmus-header">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                <div>
+                    <h3>Erasmus Mundus ChEMoinformatics+ Master's Program</h3>
+                    <p class="erasmus-subtitle">A flagship European initiative training the next generation of computational chemists</p>
+                </div>
+            </div>
+            <div class="two-col-layout">
+                <div class="col-main">
+                    <div class="info-grid">
+                        <div class="info-item"><span class="info-label">Duration</span><span class="info-value">2 Years (120 ECTS)</span></div>
+                        <div class="info-item"><span class="info-label">Scholarship</span><span class="info-value">€1,400/month (20 students)</span></div>
+                        <div class="info-item"><span class="info-label">Format</span><span class="info-value">Mobility across 2+ countries</span></div>
+                        <div class="info-item"><span class="info-label">Degree</span><span class="info-value">Joint or Double Master's</span></div>
+                    </div>
+                    <h4 class="sub-block-title">7 Partner Universities</h4>
+                    <div class="university-list">
+                        <div class="uni-item"><i class="fas fa-university" aria-hidden="true"></i> University of Strasbourg, France (Coordinator)</div>
+                        <div class="uni-item"><i class="fas fa-university" aria-hidden="true"></i> University of Bologna, Italy</div>
+                        <div class="uni-item"><i class="fas fa-university" aria-hidden="true"></i> University of Vienna, Austria</div>
+                        <div class="uni-item"><i class="fas fa-university" aria-hidden="true"></i> University of Ljubljana, Slovenia</div>
+                        <div class="uni-item"><i class="fas fa-university" aria-hidden="true"></i> University of Porto, Portugal</div>
+                        <div class="uni-item"><i class="fas fa-university" aria-hidden="true"></i> University of Warsaw, Poland</div>
+                        <div class="uni-item"><i class="fas fa-university" aria-hidden="true"></i> Novosibirsk State University, Russia</div>
+                    </div>
+                    <h4 class="sub-block-title">6 Specialized Tracks</h4>
+                    <div class="track-list">
+                        <span class="track-tag">Molecular Modelling</span>
+                        <span class="track-tag">Chemoinformatics</span>
+                        <span class="track-tag">QSAR & Machine Learning</span>
+                        <span class="track-tag">Drug Design</span>
+                        <span class="track-tag">Molecular Dynamics</span>
+                        <span class="track-tag">Data Mining in Chemistry</span>
+                    </div>
+                    <a href="https://masterchemoinfoplus.chimie.unistra.fr/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Official Website</a>
+                </div>
+                <div class="col-sidebar">
+                    <div class="sidebar-card">
+                        <h4><i class="fas fa-handshake" aria-hidden="true"></i> Global Academic Partnerships</h4>
+                        <div class="partnership-item">
+                            <strong>Japan</strong>
+                            <p>University of Strasbourg — Nara Institute of Science and Technology (NAIST) and University of Tokyo collaboration since 2008. Joint research projects and student exchanges in chemoinformatics.</p>
+                        </div>
+                        <div class="partnership-item">
+                            <strong>China</strong>
+                            <p>Major pharmaceutical hub with companies like WuXi AppTec and Hengrui Medicine. Growing AI drug discovery ecosystem with strong academic-industry collaboration.</p>
+                        </div>
+                        <div class="partnership-item">
+                            <strong>South Korea</strong>
+                            <p>Advanced computational infrastructure at KIST and KAIST. Strong government support for AI in biotechnology and pharmaceutical research.</p>
+                        </div>
+                        <div class="partnership-item">
+                            <strong>Taiwan</strong>
+                            <p>Leveraging world-leading semiconductor manufacturing (TSMC) for high-performance computing. Academia Sinica leads computational biology and chemistry research.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="future" class="section section-alt" aria-labelledby="future-heading">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Looking Ahead</span>
+            <h2 class="section-title" id="future-heading">The Future of AI in Drug Discovery</h2>
+            <p class="section-desc">Emerging technologies and predictions shaping the next decade of pharmaceutical research.</p>
+        </div>
+        <div class="cards-grid four-col">
+            <div class="prediction-card">
+                <div class="prediction-icon"><i class="fas fa-atom" aria-hidden="true"></i></div>
+                <h4>Quantum Computing</h4>
+                <p>Quantum algorithms will enable exact simulation of molecular systems currently intractable for classical computers, revolutionizing drug-target interaction modeling.</p>
+                <span class="prediction-timeline">2027-2032</span>
+            </div>
+            <div class="prediction-card">
+                <div class="prediction-icon"><i class="fas fa-cube" aria-hidden="true"></i></div>
+                <h4><span class="glossary-term" data-term="AlphaFold" tabindex="0" role="button" aria-label="AlphaFold - DeepMind's AI system for protein structure prediction. Click to learn more">AlphaFold 3</span> & Beyond</h4>
+                <p>Next-generation protein structure prediction with ligand and nucleic acid modeling will enable structure-based design for previously "undruggable" targets.</p>
+                <span class="prediction-timeline">2025-2028</span>
+            </div>
+            <div class="prediction-card">
+                <div class="prediction-icon"><i class="fas fa-clone" aria-hidden="true"></i></div>
+                <h4>Digital Twins</h4>
+                <p>Patient-specific computational models will simulate drug response before administration, enabling truly personalized medicine at scale.</p>
+                <span class="prediction-timeline">2026-2030</span>
+            </div>
+            <div class="prediction-card">
+                <div class="prediction-icon"><i class="fas fa-user-md" aria-hidden="true"></i></div>
+                <h4>Personalized Medicine</h4>
+                <p>AI-driven multi-omics integration will enable drug discovery tailored to individual genetic profiles, moving from "one drug fits all" to precision therapeutics.</p>
+                <span class="prediction-timeline">2025-2030</span>
+            </div>
+        </div>
+        <div class="future-timeline">
+            <h3 class="block-title"><i class="fas fa-road" aria-hidden="true"></i> Roadmap to 2030</h3>
+            <div class="roadmap" role="list" aria-label="Future roadmap milestones">
+                <div class="roadmap-item" role="listitem">
+                    <span class="roadmap-year">2025</span>
+                    <div class="roadmap-content"><h5>Foundation Models for Chemistry</h5><p>Large-scale pre-trained models for molecular understanding become standard in pharmaceutical R&D pipelines.</p></div>
+                </div>
+                <div class="roadmap-item" role="listitem">
+                    <span class="roadmap-year">2026</span>
+                    <div class="roadmap-content"><h5>AI-Designed Clinical Trials</h5><p>First fully AI-optimized clinical trial designs approved by major regulatory agencies (FDA, EMA).</p></div>
+                </div>
+                <div class="roadmap-item" role="listitem">
+                    <span class="roadmap-year">2027</span>
+                    <div class="roadmap-content"><h5>Quantum-Classical Hybrid</h5><p>First practical quantum-classical hybrid algorithms for molecular simulation deployed in industry.</p></div>
+                </div>
+                <div class="roadmap-item" role="listitem">
+                    <span class="roadmap-year">2028</span>
+                    <div class="roadmap-content"><h5>Real-Time Digital Twins</h5><p>Patient digital twins enable dynamic treatment optimization throughout therapy.</p></div>
+                </div>
+                <div class="roadmap-item" role="listitem">
+                    <span class="roadmap-year">2029</span>
+                    <div class="roadmap-content"><h5>Fully Automated Discovery</h5><p>End-to-end autonomous drug discovery platforms reduce timelines to under 12 months for some indications.</p></div>
+                </div>
+                <div class="roadmap-item" role="listitem">
+                    <span class="roadmap-year">2030</span>
+                    <div class="roadmap-content"><h5>Precision Medicine at Scale</h5><p>AI enables routine personalized drug selection based on individual multi-omics profiles in clinical practice.</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-block">
+            <h3 class="block-title"><i class="fas fa-chart-line" aria-hidden="true"></i> Emerging Trends</h3>
+            <div class="trends-grid">
+                <div class="trend-item"><i class="fas fa-database" aria-hidden="true"></i><div><h5>Federated Learning</h5><p>Collaborative model training across institutions without data sharing, addressing privacy concerns in pharmaceutical data.</p></div></div>
+                <div class="trend-item"><i class="fas fa-language" aria-hidden="true"></i><div><h5>Chemical Language Models</h5><p>Large language models trained on chemical text (SMILES, SELFIES) enabling natural language-driven molecular design.</p></div></div>
+                <div class="trend-item"><i class="fas fa-network-wired" aria-hidden="true"></i><div><h5>Knowledge Graphs</h5><p>Integrating biomedical knowledge into structured graphs for reasoning about drug-disease-target relationships.</p></div></div>
+                <div class="trend-item"><i class="fas fa-vr-cardboard" aria-hidden="true"></i><div><h5>VR/AR Molecular Visualization</h5><p>Immersive technologies for intuitive exploration of molecular structures and protein-ligand interactions.</p></div></div>
+                <div class="trend-item"><i class="fas fa-recycle" aria-hidden="true"></i><div><h5>Drug Repurposing AI</h5><p>Systematic identification of new therapeutic uses for existing drugs using network medicine and AI.</p></div></div>
+                <div class="trend-item"><i class="fas fa-shield-alt" aria-hidden="true"></i><div><h5>Explainable AI (XAI)</h5><p>Transparent models that provide mechanistic insights into predictions, critical for regulatory acceptance.</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="papers" class="section" aria-labelledby="papers-heading">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Literature</span>
+            <h2 class="section-title" id="papers-heading">Research Papers</h2>
+            <p class="section-desc">Curated collection of peer-reviewed publications from Europe, Japan, China, South Korea, Taiwan, and global collaborations.</p>
+        </div>
+        <div class="paper-stats-dashboard" id="paperStatsDashboard">
+            <div class="stat-card"><span class="stat-card-number" id="totalPapers">0</span><span class="stat-card-label">Total Papers</span></div>
+            <div class="stat-card"><span class="stat-card-number" id="europeCount">0</span><span class="stat-card-label">Europe</span></div>
+            <div class="stat-card"><span class="stat-card-number" id="japanCount">0</span><span class="stat-card-label">Japan</span></div>
+            <div class="stat-card"><span class="stat-card-number" id="chinaCount">0</span><span class="stat-card-label">China</span></div>
+            <div class="stat-card"><span class="stat-card-number" id="koreaCount">0</span><span class="stat-card-label">S. Korea</span></div>
+            <div class="stat-card"><span class="stat-card-number" id="taiwanCount">0</span><span class="stat-card-label">Taiwan</span></div>
+            <div class="stat-card"><span class="stat-card-number" id="globalCount">0</span><span class="stat-card-label">Global</span></div>
+            <div class="stat-card"><span class="stat-card-number" id="yearRange">2017-2026</span><span class="stat-card-label">Year Range</span></div>
+        </div>
+        <div class="year-distribution" id="yearDistribution">
+            <h4 class="distribution-title">Papers by Year</h4>
+            <div class="distribution-bars" id="distributionBars"></div>
+        </div>
+        <div class="papers-controls">
+            <div class="search-box">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input type="text" id="paperSearch" placeholder="Search by title, author, or keyword..." aria-label="Search papers">
+            </div>
+            <div class="filter-group">
+                <select id="yearFilter" aria-label="Filter by year">
+                    <option value="all">All Years</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2017">2017</option>
+                </select>
+                <select id="sortPapers" aria-label="Sort papers">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+            </div>
+        </div>
+        <div class="export-controls">
+            <button class="btn btn-primary btn-sm" id="exportCitations" onclick="exportAllCitations()">
+                <i class="fas fa-file-export" aria-hidden="true"></i> Export All Citations (APA)
+            </button>
+            <button class="btn btn-outline btn-sm" id="exportVisibleCitations" onclick="exportVisibleCitations()">
+                <i class="fas fa-filter" aria-hidden="true"></i> Export Visible Only
+            </button>
+        </div>
+        <div class="paper-tags-filter" role="group" aria-label="Filter papers by topic">
+            <button class="tag-btn active" data-tag="all">All</button>
+            <button class="tag-btn" data-tag="ML">Machine Learning</button>
+            <button class="tag-btn" data-tag="GNN">Graph Neural Networks</button>
+            <button class="tag-btn" data-tag="QSAR">QSAR</button>
+            <button class="tag-btn" data-tag="Docking">Docking</button>
+            <button class="tag-btn" data-tag="Generative">Generative AI</button>
+            <button class="tag-btn" data-tag="ADMET">ADMET</button>
+            <button class="tag-btn" data-tag="Clinical">Clinical Trials</button>
+        </div>
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-zone" id="uploadZone" role="button" tabindex="0" aria-label="Drag and drop papers here or click to upload">
+                <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+                <p class="upload-text"><strong>Upload Papers</strong></p>
+                <p class="upload-hint">Drag & drop PDF files here, or click to browse</p>
+                <p class="upload-note">Frontend demo — files are not actually uploaded to any server</p>
+                <input type="file" id="fileInput" accept=".pdf,.txt" multiple hidden aria-hidden="true">
+            </div>
+            <div class="uploaded-files" id="uploadedFiles"></div>
+        </div>
+        <div class="papers-skeleton" id="papersSkeleton">
+            <div class="skeleton-card"><div class="skeleton-header"><div class="skeleton-title"></div><div class="skeleton-year"></div></div><div class="skeleton-authors"></div><div class="skeleton-journal"></div><div class="skeleton-tags"><span></span><span></span><span></span></div><div class="skeleton-actions"><span></span><span></span></div></div>
+            <div class="skeleton-card"><div class="skeleton-header"><div class="skeleton-title"></div><div class="skeleton-year"></div></div><div class="skeleton-authors"></div><div class="skeleton-journal"></div><div class="skeleton-tags"><span></span><span></span><span></span></div><div class="skeleton-actions"><span></span><span></span></div></div>
+            <div class="skeleton-card"><div class="skeleton-header"><div class="skeleton-title"></div><div class="skeleton-year"></div></div><div class="skeleton-authors"></div><div class="skeleton-journal"></div><div class="skeleton-tags"><span></span><span></span><span></span></div><div class="skeleton-actions"><span></span><span></span></div></div>
+            <div class="skeleton-card"><div class="skeleton-header"><div class="skeleton-title"></div><div class="skeleton-year"></div></div><div class="skeleton-authors"></div><div class="skeleton-journal"></div><div class="skeleton-tags"><span></span><span></span><span></span></div><div class="skeleton-actions"><span></span><span></span></div></div>
+        </div>
+        <div class="papers-grid" id="papersGrid" style="display:none;"></div>
+        <div class="papers-count" id="papersCount"></div>
+    </div>
+</section>
+<section id="references" class="section section-alt" aria-labelledby="references-heading">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Bibliography</span>
+            <h2 class="section-title" id="references-heading">References</h2>
+            <p class="section-desc">Complete list of cited works in APA 7th edition format.</p>
+        </div>
+        <div class="references-list" id="referencesList"></div>
+    </div>
+</section>
+<section id="about" class="section" aria-labelledby="about-heading">
+    <div class="container">
+        <div class="two-col-layout about-layout">
+            <div class="col-main">
+                <div class="section-header" style="text-align:left;">
+                    <span class="section-tag">About This Project</span>
+                    <h2 class="section-title" id="about-heading">Mission & Scope</h2>
+                </div>
+                <p class="about-text">This academic portal provides a comprehensive overview of how artificial intelligence and machine learning are transforming computational chemistry and drug discovery. Our mission is to serve as an educational resource for students, researchers, and professionals interested in the intersection of these fields.</p>
+                <h4 class="sub-block-title">Topics Covered</h4>
+                <ul class="about-list">
+                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> Artificial Intelligence & Machine Learning in Chemistry</li>
+                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> Computational Chemistry & Molecular Modeling</li>
+                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> Drug Discovery & Development Pipeline</li>
+                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> Chemoinformatics & Bioinformatics</li>
+                    <li><i class="fas fa-check-circle" aria-hidden="true"></i> Deep Learning Architectures for Molecules</li>
+                </ul>
+                <h4 class="sub-block-title">Global Perspective</h4>
+                <p class="about-text">This project emphasizes a truly global view, highlighting contributions and initiatives from:</p>
+                <div class="region-tags">
+                    <span class="region-tag"><i class="fas fa-globe-europe" aria-hidden="true"></i> Europe</span>
+                    <span class="region-tag"><i class="fas fa-torii-gate" aria-hidden="true"></i> Japan</span>
+                    <span class="region-tag"><i class="fas fa-dragon" aria-hidden="true"></i> China</span>
+                    <span class="region-tag"><i class="fas fa-flag" aria-hidden="true"></i> South Korea</span>
+                    <span class="region-tag"><i class="fas fa-microchip" aria-hidden="true"></i> Taiwan</span>
+                </div>
+            </div>
+            <div class="col-sidebar">
+                <div class="sidebar-card about-card">
+                    <h4><i class="fas fa-info-circle" aria-hidden="true"></i> Methodology</h4>
+                    <p>This portal synthesizes information from peer-reviewed journals, official program documentation, and authoritative sources in computational chemistry and AI.</p>
+                    <h4 style="margin-top:1.5rem;"><i class="fas fa-database" aria-hidden="true"></i> Data Sources</h4>
+                    <ul class="source-list">
+                        <li>PubMed / MEDLINE</li>
+                        <li>Journal of Cheminformatics</li>
+                        <li>Journal of Chemical Information and Modeling</li>
+                        <li>Nature Machine Intelligence</li>
+                        <li>ACS Central Science</li>
+                        <li>Erasmus Mundus Program Database</li>
+                        <li>Official University Partnership Records</li>
+                    </ul>
+                    <h4 style="margin-top:1.5rem;"><i class="fas fa-calendar" aria-hidden="true"></i> Last Updated</h4>
+                    <p>July 2026</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="logo"><i class="fas fa-atom" aria-hidden="true"></i><span>AI & CompChem</span></a>
+                <p>Advancing drug discovery through the power of artificial intelligence and computational chemistry.</p>
+                <div class="footer-actions">
+                    <button class="btn btn-outline btn-sm" onclick="window.print()" aria-label="Print this page">
+                        <i class="fas fa-print" aria-hidden="true"></i> Print Page
+                    </button>
+                    <button class="btn btn-outline btn-sm" onclick="citeThisPage()" aria-label="Cite this page in APA format">
+                        <i class="fas fa-quote-right" aria-hidden="true"></i> Cite This Page
+                    </button>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#ai-today">AI Today</a></li>
+                    <li><a href="#global">Global Impact</a></li>
+                    <li><a href="#future">Future</a></li>
+                    <li><a href="#papers">Research Papers</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="https://masterchemoinfoplus.chimie.unistra.fr/" target="_blank" rel="noopener noreferrer">Erasmus Mundus ChEMoinformatics+</a></li>
+                    <li><a href="https://www.rdkit.org/" target="_blank" rel="noopener noreferrer">RDKit</a></li>
+                    <li><a href="https://deepchem.io/" target="_blank" rel="noopener noreferrer">DeepChem</a></li>
+                    <li><a href="https://www.ebi.ac.uk/chembl/" target="_blank" rel="noopener noreferrer">ChEMBL Database</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI & Computational Chemistry Research Portal. Academic use only.</p>
+        </div>
+    </div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+<div class="glossary-tooltip" id="glossaryTooltip" role="tooltip" aria-hidden="true">
+    <div class="glossary-header"><strong id="glossaryTerm"></strong></div>
+    <div class="glossary-body" id="glossaryDef"></div>
+</div>
+<div class="toast" id="toast"><i class="fas fa-check-circle" aria-hidden="true"></i><span id="toastMessage">Citation copied!</span></div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
